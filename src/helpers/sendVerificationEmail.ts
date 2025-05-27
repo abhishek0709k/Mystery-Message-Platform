@@ -9,7 +9,7 @@ export async function sendVerificationEmail(
   try {
     await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'abhishekjitendra841441@gmail.com',
+      to: [email],
       subject: 'Mystery message | Verification code',
       react: EmailTemplate({ username, otp }),
     });
